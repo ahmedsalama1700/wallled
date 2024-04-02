@@ -1,0 +1,461 @@
+:root{
+    --first :#47B76A;
+
+}
+
+html { scroll-behavior: smooth; }
+
+/* 
+
+nav bar
+
+*/
+.ournav{
+    /* padding: 15px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--first);
+    position: fixed;
+    width: 100%;
+    z-index: 5000;
+}
+
+.ournav .logo a{
+    text-decoration: none;
+}
+.ournav .logo a img{
+height: 85px;
+color: #fff;
+margin-right: 15px;
+}
+.ournav .links ul {
+    display: flex;
+}
+
+.ournav .links ul li a{
+display: block;
+margin-left: 15px;
+text-align: center;
+color: #fff;
+cursor: pointer;
+padding:5px  10px;
+border-radius: 15px;
+text-decoration: none;
+transition: 1s;
+
+}
+.ournav .links ul li a:hover{
+    color: var(--first);
+    background-color: #fff;
+}
+.ournav .lines{
+    display: none;
+}
+.ournav .links ul li a.active{
+    color: var(--first);
+    background-color: #fff;
+}
+
+@media (max-width: 992px){
+    .ournav .lines{
+        display: block;
+        cursor: pointer;
+        padding-left: 10px;
+    }
+    .ournav .for-center{
+        display: none;
+    }
+    .ournav .lines .line{
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        margin: 6px 0px;
+    }
+    .ournav .links{
+        position: absolute;
+        top: 80px;
+        left: 0px;
+        right: 0;
+        width: 100vw;
+        background-color: var(--first);
+        transition: 0.2s;
+        height: 0px;
+    }
+     .links.show{
+        height: 280px;
+    }
+    .ournav .links ul{
+        display: block;
+        width: fit-content;
+        margin: 20px auto 0px auto ;
+        text-align: center;
+        opacity: 0;
+    }
+    .ournav .links ul a{
+        margin-bottom: 20px;
+    }
+    .links.show ul{
+        opacity: 1;
+    }
+}
+
+
+
+
+
+/* main header */
+.main-header{
+    
+    background-image: url("images/photo 2.jpg");
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    overflow-x: hidden;
+    flex-direction: column;
+    height: 100vh;
+
+}
+.main-header .main-div{
+    width: 45%;
+    height: 35%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: .1;
+    border: 3px solid #004B47;
+}
+.main-header  h2{
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: black;
+}
+.main-header  p{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: var(--first);
+}
+
+/* our comapny */
+.our-company{
+    
+    padding: 50px 15px;
+    background-attachment: fixed;
+    background-image: url("images/Shape3.svg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    overflow-x: hidden;
+}
+.our-company .our-company-text{
+    margin-bottom: 80px;
+    margin-top: 20px;
+}
+.our-company .our-company-text::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 90px;
+    height: 3px;
+    background-color: var(--first);
+    margin: 15px 0;
+
+}
+@media (max-width: 576px){
+.our-company .main-one .farm{
+    margin-bottom: 80px;
+}
+
+
+}
+.our-company .main-one{
+    
+    display: flex;
+    justify-content: space-evenly ;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.our-company .main-one .farm img{
+    width: 150px;
+    margin-bottom: 10px;
+}
+.our-company .main-one .farm h5{
+    font-size: 20px;
+
+    color: var(--first);
+    margin: 15px 0;
+  
+}
+
+.our-company .main-one .farm p {
+    text-align: right;
+}
+
+.our-company .main-one .farm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 60px;
+    border: 1px solid var(--first);
+    border-radius: 50px;
+}
+
+.our-company .main-one .farm button{
+padding: 10px;
+height: 35px;
+border-radius: 15px;
+border: none;
+background-color: var(--first);
+color: #fff;
+margin-top: 20px;
+line-height: 10px;
+padding: 0 20px;
+}
+.our-company .main-one .farm button i{
+
+margin-right: 5px;
+background-color: var(--first);
+color: #fff;
+
+}
+
+
+
+/* about us */
+.about-us{
+    
+    padding: 50px 15px;
+
+    background-attachment: fixed;
+    background-color: var(--first);
+}
+@media (max-width: 576px) {.about-us .about-us-words{
+    margin-bottom: 60px;
+}}
+.about-us .about-us-words h2{
+    color: #fff;
+    margin-bottom: 70px;
+}
+.about-us .about-us-words p{
+    margin-top: 10px;
+    word-wrap: break-word;
+    color: #fff;
+    margin-bottom: 50px;
+}
+.about-us .about-us-words h2::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 130px;
+    height: 3px;
+    background-color: #fff;
+    margin: 15px 0;
+    
+    
+    }
+.about-us .about-us-img {
+     display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column
+}
+.about-us .about-us-img img{
+    width: 300px;
+    display: block;
+    margin-bottom: 20px;
+}
+.about-us .about-us-img h3{
+    display: block;
+    color: #fff;
+    margin-top: 20px;
+}
+.about-us .about-us-img p{
+    display: block;
+    text-align: center;
+    color: #fff;
+}
+
+
+
+/* start contact us */
+
+.contact-us{
+    padding: 15px;
+   
+    background-image: url("images/Shape4.svg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    z-index: 1;
+
+    
+
+}
+@media (max-width: 576px){.contact-us{
+    margin-bottom: 50px ;
+}}
+.contact-us .contact-form h2::after{
+content: "";
+display: block;
+position: absolute;
+width: 168px;
+height: 3px;
+background-color: var(--first);
+margin: 15px 0;
+
+
+
+}
+.contact-us .contact-form form button{
+    background-color: var(--first);
+    color: #fff;
+    text-align: right;
+    padding: 0px 20px;
+    padding-right: 15px;
+    border: none;
+    height: 50px;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.contact-us .contact-form form span{
+    color: var(--first);
+}
+.contact-us .contact-form h2{
+    margin-bottom: 60px;
+    margin-top: 30px;
+    color: var(--first);
+}
+.contact-us .contact-form form{
+    border: 1px solid var(--first);
+    padding: 15px;
+    border-radius: 15px;
+}
+.contact-us .contact-form form input{
+    display: block;
+    border: 1px solid #BBB2B2;
+    width: 80%;
+    border-radius:20px ;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+.contact-us .contact-form form span{
+    margin-bottom: 5px;
+    display: inline-block;
+}
+.contact-us .contact-form form textarea{
+    display: block;
+    border: 1px solid #BBB2B2;
+    width: 80%;
+    border-radius:20px ;
+    margin-bottom: 15px;
+    /* margin-top: 25px; */
+    padding: 5px;
+    height: 100px;
+}
+
+
+
+
+.contact-us .contact-image {
+    position: relative;
+} 
+.contact-us .contact-img img{
+    position: absolute;
+    width: 60%;
+    bottom: 15%;
+    left: -51%;
+    transform: rotate(90deg);
+
+}
+
+
+
+
+
+/* start footer */
+.footer{
+    background-color: var(--first);
+    padding: 30px 15px;
+    text-align: right;
+    
+    
+    
+}
+@media (max-width: 576px){
+ .footer .footer-links , .footer .numbers {
+    margin-bottom: 80px;}
+} 
+.footer p ,.footer h5{
+color: #fff;
+}
+.footer ul{
+    padding: 0;
+    margin: 0;
+
+}
+.footer ul li{
+    display: inline-block;
+    margin-left: 35px;
+
+}
+.footer ul li i{
+    font-size: 30px;
+    color: #fff;
+
+}
+.footer h5{
+    margin-bottom: 20px;
+}
+
+
+/* start footer end */
+.footer-end{
+    text-align: center;
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-end p{
+    color: #928c8c;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* font-size: 25px; */
+}
+
+@media (max-width: 576px){.main-header .main-div{
+    width: 70%;
+}
+.main-header h2,.main-header p{
+    font-size: 20px;
+}
+
+}
+
+
+
+.cube{
+    margin: 80px 0 0 0;
+    /* background-color: var(--first) ; */
+    /* background: transparent; */
+    padding: 50px 0;
+}
+.cbp-l-filters-button{
+    text-align: center;
+}
+.cbp-l-filters-button .cbp-filter-item {
+border-radius: 15px;
+}
